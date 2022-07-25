@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  width: 95%;
+  border: 1px solid rgba(0, 0, 0, 0.438);
+  border-radius: 0.1rem;
+  margin: 1rem 0 0 3rem;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+th {
+  text-align: left;
+}
+
+td {
+  padding: 0.2rem;
+  margin: 1rem;
+  border-collapse: collapse;
+  border: 1px solid rgba(0, 0, 0, 0.438);
+}
+
+.mission-btn {
+  border-right-style: hidden;
+  width: 8%;
+}
+
+.aactive {
+  background-color: blue;
+  border-style: none;
+  color: white;
+  padding: 0 1rem;
+  border-radius: 5px;
+}
+
+.inactive {
+  background-color: rgb(133, 127, 127);
+  border-style: none;
+  color: white;
+  padding: 0 1rem;
+  border-radius: 5px;
+}
+
+.activebtn {
+  background-color: rgb(238, 232, 232);
+  color: red;
+  padding: 0 1rem;
+  border-radius: 5px;
+}
+
+.inactivebtn {
+  background-color: rgb(238, 232, 232);
+  color: black;
+  padding: 0 1rem;
+  border-radius: 5px;
+}

@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  font-size: 1.2rem;
+}
+
+.logo-img {
+  width: 50px;
+}
+
+.myLinks {
+  display: flex;
+  column-gap: 1rem;
+}
+
+.rockets,
+.mission,
+.profile {
+  color: rgb(0, 170, 255);
+  text-decoration: none;
+}
+
+.rockets.active,
+.mission.active,
+.profile.active {
+  text-decoration: underline;
+}
+
+.mission {
+  border-right: 2px solid black;
+  padding: 0 1rem;
+}

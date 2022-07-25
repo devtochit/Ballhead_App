@@ -1,0 +1,12 @@
+.profile-page {
+  margin: 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 45%);
+  gap: 2rem;
+}
+
+.Profile-cards {
+  list-style-type: none;
+  border: 1px solid rgb(218, 214, 214);
+  padding: 1rem 0;
+}
