@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { getGame } from '../Redux/game/game';
 
 const Rocket = () => {
@@ -18,6 +18,7 @@ const Rocket = () => {
     } = rocket;
     return (
       <>
+          <Link to={`/profile/${id}`}>
         <div key={id}>
           <div className="ui link cards">
             <div className="card">
@@ -30,14 +31,10 @@ const Rocket = () => {
                 <img src={images} alt={name} className="meta" />
               </div>
             </div>
-
           </div>
-
-          <li>
-            {/* 👇️ link to dynamic path */}
-            <Link to="/mission/${id}">Users</Link>
-          </li>
         </div>
+        </Link>
+
       </>
     );
   });

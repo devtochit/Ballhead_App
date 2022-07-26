@@ -11,6 +11,11 @@ const initialState = {
 export const gameSlice = createSlice({
   name: 'rockets',
   initialState,
+  reducers: {
+    gameUpdate: (state, action) => {
+      state.missions = action.payload;
+    },
+  },
   extraReducers: {
     [getGame.pending]: (state) => {
       state.isLoading = true;// eslint-disable-line

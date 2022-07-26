@@ -12,8 +12,9 @@ const App = () => (
     <Header />
     <Routes>
       <Route path="/" element={<Rocket />} />
-      <Route path="/mission:id" element={<Mission />} />
+      <Route path="/mission/" element={<Mission />} />
       <Route path="/profile" element={<Profile />} />
+      <Route path="/profile/ :id" element={<Profile />} />
       <Route>404 Not Found</Route>
     </Routes>
   </Router>
