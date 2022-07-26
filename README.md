@@ -1,4 +1,4 @@
-# Fire Data
+# GAME SALE APP
 This application gathers data from the [INPE API](https://queimadas.dgi.inpe.br/queimadas/dados-abertos/#), showcasing the number of daily focused fires in South America. The user can select the country, state, and city for more specific information.
 
 ## Built With:
