@@ -1,6 +1,6 @@
 # GAME SALE APP
 This application gathers data from the [INPE API](https://queimadas.dgi.inpe.br/queimadas/dados-abertos/#), showcasing the number of daily focused fires in South America. The user can select the country, state, and city for more specific information.
-
+https://medium.com/@s.alexis/using-react-router-useparams-to-fetch-data-dynamically-13288e24ed1#:~:text=React%20Router%20is%20a%20library,calls%20based%20on%20route%20parameters.
 ## Built With:
 - React & Redux
 - Redux Toolkit
