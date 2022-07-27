@@ -9,7 +9,7 @@ import Mission from './Components/Mission';
 
 const App = () => (
   <Router>
-    <Header />
+
     <Routes>
       <Route path="/" element={<Rocket />} />
       <Route path="/mission/" element={<Mission />} />
