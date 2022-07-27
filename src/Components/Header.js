@@ -8,7 +8,6 @@ const Header = () => (
     <div className="header-section">
       <div className="logo">
         <img className="logo-img" src={spaceLogo} alt="logo" />
-        <h1>Space Travelers' Hub</h1>
       </div>
       <ul className="myLinks">
         <li>

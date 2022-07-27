@@ -2,19 +2,17 @@ import {
   BrowserRouter as Router, Routes, Route,
 } from 'react-router-dom';
 import './App.css';
-import Header from './Components/Header';
-import Profile from './Components/Profile';
-import Rocket from './Components/RocketComponent';
-import Mission from './Components/Mission';
+import HomePage from './Components/Hompage';
+import CrypoDetails from './Components/crypoDetails';
+import Cryptocurrency from './Components/cryptocurrency';
 
 const App = () => (
   <Router>
 
     <Routes>
-      <Route path="/" element={<Rocket />} />
-      <Route path="/mission/" element={<Mission />} />
-      <Route path="/profile" element={<Profile />} />
-      <Route path="/profile/ :id" element={<Profile />} />
+      <Route path="/" element={<HomePage />} />
+      <Route path="/crytocurrencies" element={<Cryptocurrency />} />
+      <Route path="/crypto/:coinId" element={<CrypoDetails />} />
       <Route>404 Not Found</Route>
     </Routes>
   </Router>
