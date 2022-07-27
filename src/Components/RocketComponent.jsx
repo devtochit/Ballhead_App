@@ -1,44 +1,48 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { getGame } from '../Redux/game/game';
+import millify from 'millify';
+import { Typography, Row, Col, Statistic } from 'antd';
+import { useGetCryptosQuery } from '../services/api.service.js';
+import Loader from './Loader';
+ 
 
-const Rocket = () => {
-  const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(getGame());
-  }, [dispatch]);
+const HomePage= () => {
+  const { data, isFetching }= useGetCryptosQuery (10);
+   const globalStats = data?.data?.stats
+   console.log( globalStats)
 
-  const { games } = useSelector((store) => store.game);
-  console.log(games);
-  const renderList = games.map((rocket) => {
-    const {
-      id, name, price, images,
-    } = rocket;
+if (isFetching) return <Loader/>
+ const { Title} = Typography
+
+  
     return (
       <>
-          <Link to={`/profile/${id}`}>
-        <div key={id}>
-          <div className="ui link cards">
-            <div className="card">
-              <div className="content">
-                <div className="header">{name}</div>
-                <div className="meta price">
-                  $
-                  {price}
-                </div>
-                <img src={images} alt={name} className="meta" />
-              </div>
-            </div>
-          </div>
-        </div>
-        </Link>
+      <Title level={2} className='heading'>   Global Crypto Stats    </Title>
+       <Row gutter={[32,32]}>
+        <Col span={12}> <Statistic title=' Total CryptoCurrencies' value={globalStats.total}> </Statistic> </Col>
+        <Col span={12}> <Statistic title=' Total Exchange' value={ millify(globalStats.totalExchanges) }> </Statistic> </Col>
+        <Col span={12}> <Statistic title=' Total MarketCap' value={ ` $${millify(globalStats.totalMarketCap)}` }> </Statistic> </Col>
+        <Col span={12}> <Statistic title=' Total 24h Volume ' value={ ` $${millify(globalStats.total24hVolume)}` }> </Statistic> </Col>
+        <Col span={12}> <Statistic title=' Total CryptoCurrencies' value={globalStats.total}> </Statistic> </Col>
+        <Col span={12}> <Statistic title=' Total Markets' value={globalStats.totalMarkets}> </Statistic> </Col>
+
+
+
+
+        
+        
+        </Row>
+
+
+
+
+
+
 
       </>
     );
-  });
-  return <>{renderList}</>;
+
 };
 
-export default Rocket;
+export default HomePage;
