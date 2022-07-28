@@ -6,7 +6,7 @@ import { Typography, Row, Col, Statistic } from 'antd';
 import { useGetCryptosQuery } from '../services/api.service.js';
 import Loader from './Loader';
 import Cryptocurrency from './cryptocurrency.jsx';
-
+import Homepage from './navbar/homeNav'
 
 
 const HomePage = () => {
@@ -20,6 +20,7 @@ const HomePage = () => {
 
   return (
     <>
+      <Homepage />
       <Title level={2} className='heading'>   Global Crypto Stats    </Title>
       <Row gutter={[32, 32]}>
         <Col span={12}> <Statistic title=' Total CryptoCurrencies' value={globalStats.total}> </Statistic> </Col>

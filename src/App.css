@@ -17,6 +17,13 @@
 a:hover{
     color: var(--pink) !important;
 }
+li p{
+align-items: center;
+}
+nav{
+    display: flex;
+    justify-items: center;
+}
 
 .app{
     display: flex;
@@ -43,6 +50,9 @@ a:hover{
     height: 100vh;
     margin: 0px;
     background-color: rgb(0, 21, 41);
+}
+.menu-itme{
+    display: flex;
 }
 
 .logo-container{
@@ -111,12 +121,19 @@ a:hover{
     }
 
     .nav-container{
-        height: 8vh;
-        position:fixed;
+        height: 9vh;
+        position:sticky;
         width: 100%;
-        z-index: 100;
         background-color: var(--bgSecondary);
     }
+  .nav-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 63px;
+    list-style-type:none;
+  }
   
     .menu-control-container{
         display: block !important;
