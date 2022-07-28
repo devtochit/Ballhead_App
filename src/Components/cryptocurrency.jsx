@@ -47,7 +47,7 @@ function Cryptocurrency(simplified) {
                 {cryptos?.map((currency) => (
                     <Col
                         xs={24}
-                        sm={1}
+                        sm={16}
                         lg={6}
                         className='crypto-card'
                         key={currency.uuid}

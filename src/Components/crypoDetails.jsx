@@ -6,7 +6,8 @@ import { Col, Row, Typography, Select } from 'antd'
 import Loader from './Loader'
 import LineChart from './lineChart'
 import { useGetCryptoDetailsQuery, useGetCryptoHistoryQuery } from '../services/api.service'
-import { MoneyCollectOutlined, DollarCircleOutlined, FundOutlined, ExclamationCircleOutlined, StopOutlined, TrophyOutlined, CheckOutlined, NumberOutlined, ThunderboltOutlined } from '@ant-design/icons';
+import { MoneyCollectOutlined, DollarCircleOutlined, FundOutlined, ExclamationCircleOutlined, StopOutlined, TrophyOutlined, CheckOutlined, NumberOutlined, ThunderboltOutlined, LeftOutlined } from '@ant-design/icons';
+import DetailsNav from './navbar/detailsNav';
 
 const { Title, Text } = Typography
 const { Options } = Select
@@ -42,8 +43,7 @@ function CrypoDetails() {
     ]
     return (
         <>
-            <button onClick={() => navigate(-1)}>Go back</button>
-
+            <DetailsNav />
             <Col className="coin-detail-container">
                 <Col className="coin-heading-container">
                     <Title level={2} className="coin-name">
