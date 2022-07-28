@@ -26,7 +26,7 @@ const Navbar = () => {
     } else {
       setActiveMenu(true);
     }
-  }, [screenSize]);
+  }, [screenSize]); 
 
   return (
     <div className="nav-container">
@@ -35,7 +35,7 @@ const Navbar = () => {
           <li>
             <MenuOutlined />
           </li>
-          <Text> cryptolist</Text>
+          <Text level={1}>  cryptolist</Text>
 
 
 

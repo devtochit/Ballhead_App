@@ -14,7 +14,7 @@ import { useGetCryptosQuery } from '../services/api.service';
 
 
 function Cryptocurrency(simplified) {
-    const count = simplified ? 10 : 100;
+    const count = simplified ? 15 : 100;
     const { data: cryptosList, isFetching } = useGetCryptosQuery(count)
     const [cryptos, setCryptos] = useState()
     const [searchTerm, setSearchTeam] = useState('')
@@ -43,11 +43,11 @@ function Cryptocurrency(simplified) {
                 </div>
             )}
 
-            <Row gutter={[32, 32]} className='cryto-card-container'>
+            <Row  className='cryto-card-container black '>
                 {cryptos?.map((currency) => (
                     <Col
                         xs={24}
-                        sm={16}
+                        sm={32}
                         lg={6}
                         className='crypto-card'
                         key={currency.uuid}
@@ -57,6 +57,7 @@ function Cryptocurrency(simplified) {
                                 title={`${currency.rank}.${currency.name}`}
                                 extra={<img src={currency.iconUrl} className="crypto-image" />}
                                 hoverable
+                                className='black' 
                             >
                                 <p> Price:{millify(currency.price)}</p>
                                 <p> Market Cap:{millify(currency.marketCap)}</p>

@@ -10,7 +10,7 @@ import Homepage from './navbar/homeNav'
 
 
 const HomePage = () => {
-  const { data, isFetching } = useGetCryptosQuery(10);
+  const { data, isFetching } = useGetCryptosQuery(15);
   const globalStats = data?.data?.stats
   console.log(globalStats)
 
@@ -20,24 +20,22 @@ const HomePage = () => {
 
   return (
     <>
-      <Homepage />
-      <Title level={2} className='heading'>   Global Crypto Stats    </Title>
-      <Row gutter={[32, 32]}>
-        <Col span={12}> <Statistic title=' Total CryptoCurrencies' value={globalStats.total}> </Statistic> </Col>
+        <Row gutter={[32, 32]} className='blue'>
+      <Col>   <Homepage /></Col>
+        <Col> <Title level={2} className='heading'>   Global Crypto Stats    </Title></Col>
+       <Col span={12}> <Statistic title=' Total CryptoCurrencies' value={globalStats.total}> </Statistic> </Col>
         <Col span={12}> <Statistic title=' Total Exchange' value={millify(globalStats.totalExchanges)}> </Statistic> </Col>
         <Col span={12}> <Statistic title=' Total MarketCap' value={` $${millify(globalStats.totalMarketCap)}`}> </Statistic> </Col>
         <Col span={12}> <Statistic title=' Total 24h Volume ' value={` $${millify(globalStats.total24hVolume)}`}> </Statistic> </Col>
         <Col span={12}> <Statistic title=' Total CryptoCurrencies' value={globalStats.total}> </Statistic> </Col>
         <Col span={12}> <Statistic title=' Total Markets' value={globalStats.totalMarkets}> </Statistic> </Col>
-        <Cryptocurrency simplified />
-
-
-
-
-
       </Row>
 
-
+       <Row gutter={[32,32]}>
+<Col sm={24} >       
+ <Cryptocurrency simplified />
+</Col>
+        </Row>
 
 
 
