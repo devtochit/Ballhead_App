@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import millify from 'millify';
+
 import { Typography, Row, Col, Statistic } from 'antd';
 import { useGetCryptosQuery } from '../services/api.service.js';
 import Loader from './Loader';

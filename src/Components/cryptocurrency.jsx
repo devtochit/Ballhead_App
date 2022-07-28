@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import millify from 'millify';
-import { Grid } from 'antd-mobile'
+// import { Grid } from 'antd-mobile'
 
 import { Card, Row, Col, Input } from 'antd';
 import { Link } from 'react-router-dom';
@@ -47,7 +47,7 @@ function Cryptocurrency(simplified) {
                 {cryptos?.map((currency) => (
                     <Col
                         xs={24}
-                        sm={16}
+                        sm={1}
                         lg={6}
                         className='crypto-card'
                         key={currency.uuid}
