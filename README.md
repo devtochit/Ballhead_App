@@ -1,21 +1,22 @@
-# GAME SALE APP
-This application gathers data from the [INPE API](https://queimadas.dgi.inpe.br/queimadas/dados-abertos/#), showcasing the number of daily focused fires in South America. The user can select the country, state, and city for more specific information.
+# Crypto Ranking site
+This application gathers data from the [rapidapi API](https://coinranking1.p.rapidapi.com/#), showcasing the amount in which crypto assert trade and and ranking of the coin
 
 ## Built With:
 - React & Redux
 - Redux Toolkit
 - CSS
-- Material Ui
+- Ant Design
 - JavaScript
 xx
 ## Live demo:
 Not ready for deployment.
+[live video](https://www.loom.com/share/0d15eb9f599b46ac99e5edc380e65aec)
 
 ## Getting Started:
 To access and change the code on your computer (using GIT):
 > Note: if you don't use git, you can download the ZIP of this repository by clicking on the "Code" button above the files list.
 ### Setup
-- Open the repository [link](https://github.com/Gopxfs/fire-data-app).
+- Open the repository [link](https://github.com/HeDevedUp/BallHEAD_APP).
 - Click on the "Code" button, above the files list.
 - Select one of the three options to copy the URL: HTTPS, SSH key and GitHub CLI.
 - Open the Terminal in the directory you want to copy the project.
@@ -33,5 +34,5 @@ To edit this project:
 ## :star2: Show your support
 Give a :star: if you like my project!
 
-## :pencil: License
-This project is [MIT](https://github.com/Gopxfs/fire-data-app/blob/main/LICENSE) licensed.
+## :Acknowledgments
+Credit goes to Nelson Sakwa for the design inspiration.

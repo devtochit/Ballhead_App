@@ -1,15 +1,15 @@
 import {
-  Switch, Routes, Route,
+  Switch, Route,
 } from 'react-router-dom';
 import './App.css';
+import { Layout } from 'antd';
 import HomePage from './Components/Hompage';
 import CrypoDetails from './Components/crypoDetails';
 import Cryptocurrency from './Components/cryptocurrency';
-import { Layout } from 'antd'
 
 const App = () => (
   <Layout>
-    <div className='routes'>
+    <div className="routes">
       <Switch>
         <Route exact path="/">
           <HomePage />
@@ -24,9 +24,6 @@ const App = () => (
       </Switch>
     </div>
   </Layout>
-
-
-
 
 );
 
