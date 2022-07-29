@@ -11,6 +11,7 @@ xx
 ## Live demo:
 Not ready for deployment.
 [live video](https://www.loom.com/share/0d15eb9f599b46ac99e5edc380e65aec)
+[demo link ](https://stellular-baklava-dafd35.netlify.app/)
 
 ## Getting Started:
 To access and change the code on your computer (using GIT):
