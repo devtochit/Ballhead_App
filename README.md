@@ -14,7 +14,7 @@ Not ready for deployment.
 [demo link ](https://stellular-baklava-dafd35.netlify.app/)
 
 ## Getting Started:
-To access and change the code on your computer (using GIT):
+To access and change the code on your computer hh(using GIT):
 > Note: if you don't use git, you can download the ZIP of this repository by clicking on the "Code" button above the files list.
 ### Setup:
 - Open the repository [link](https://github.com/HeDevedUp/BallHEAD_APP).
