@@ -29,6 +29,11 @@ function Cryptocurrency(simplified) {
     }, [cryptosList, searchTerm])
 
     if (isFetching) return <Loader />
+    const gridStyle = {
+          background: '#1B262C',
+        color: ' #fff ',
+        borderRadius: '5px'
+    }
 
     return (
 
@@ -43,7 +48,7 @@ function Cryptocurrency(simplified) {
                 </div>
             )}
 
-            <Row  className='cryto-card-container black '>
+            <Row gutter={[32, 32]} className='cryto-card-container black '>
                 {cryptos?.map((currency) => (
                     <Col
                         xs={24}
@@ -57,7 +62,7 @@ function Cryptocurrency(simplified) {
                                 title={`${currency.rank}.${currency.name}`}
                                 extra={<img src={currency.iconUrl} className="crypto-image" />}
                                 hoverable
-                                className='black' 
+                                style={gridStyle}
                             >
                                 <p> Price:{millify(currency.price)}</p>
                                 <p> Market Cap:{millify(currency.marketCap)}</p>

@@ -17,10 +17,6 @@
 body{
     background-color: #0071bd;
 }
-.black{
-    background-color: #080a0c !important 
-
-}
 
 a:hover{
     color: var(--pink) !important;
