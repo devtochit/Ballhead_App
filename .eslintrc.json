@@ -32,9 +32,10 @@
     "react/react-in-jsx-scope": "off",
     "import/no-unresolved": "off",
     "no-shadow": "off"
+    
   },
   "ignorePatterns": [
-    "dist/",
-    "build/"
+    "dist/"
+    // "build/"
   ]
 }
