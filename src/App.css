@@ -50,6 +50,7 @@ nav {
 
 .routes {
   padding: 0 20px 0 10px;
+  border-radius: 30px;
 }
 
 .nav-container {
@@ -92,7 +93,7 @@ nav {
 }
 
 .loader {
-  height: 81vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -326,6 +327,12 @@ nav {
 }
 
 @media screen and (max-width: 500px) {
+  .align-heading-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
   .nav-navbar {
     display: flex;
     justify-content: space-between;
@@ -349,14 +356,15 @@ nav {
 
 @media screen and (max-width: 500px) {
   .icon-btn {
-    width: 148px;
     border-radius: 10px;
     color: #01010c;
-    background: #6765e0;
-    height: 74px;
+    background: #08082d;
+    height: 31px;
     font-weight: 900;
-    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.25);
-    display: block;
+    box-shadow: inset 4px 4px 8px rgb(0 0 0 / 25%);
+    display: flex;
+    align-items: center;
+    text-align: center;
   }
 
   .h2.ant-typography {
@@ -473,14 +481,6 @@ nav {
 .current-price {
   margin-top: 0 !important;
   font-weight: 900 !important;
-}
-
-.home-heading-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 40px;
-  gap: 70px;
 }
 
 .show-more {

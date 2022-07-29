@@ -39,7 +39,8 @@ function Cryptocurrency(simplified) {
     return (
 
         <>
-            {simplified && (
+          <div className=' crytocurrency-dev'>
+          {simplified && (
                 <div className='search-crypto'>
                     <Input
                         placeholder='Search Crypto'
@@ -74,6 +75,7 @@ function Cryptocurrency(simplified) {
 
                 ))}
             </Row>
+          </div>
 
 
         </>

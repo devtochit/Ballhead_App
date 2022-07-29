@@ -13,7 +13,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/crypto/:coinId" element={<CrypoDetails />} />
-          <Route path="/profile" element={<Cryptocurrency />} />
+          <Route path="/crytocurrencies" element={<Cryptocurrency />} />
           <Route>404 Not Found</Route>
         </Routes>
       </Router>

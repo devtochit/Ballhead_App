@@ -7,6 +7,7 @@ import { useGetCryptosQuery } from '../services/api.service.js';
 import Loader from './Loader';
 import Cryptocurrency from './cryptocurrency.jsx';
 import Homepage from './navbar/homeNav'
+import  { ArrowDownOutlined}from '@ant-design/icons';
 
 
 const HomePage = () => {
@@ -31,10 +32,11 @@ const HomePage = () => {
         <Col span={12}> <Statistic title=' Total Markets' value={globalStats.totalMarkets}> </Statistic> </Col>
       </Row>
 
+      <div className=' align-heading-nav'>
       <Row className='home-heading-container'>
         <Col>
           <Title level={2} className='home-title'>
-            Top Cryptos in the world
+            Top 10
           </Title>
         </Col>
       </Row>
@@ -42,10 +44,11 @@ const HomePage = () => {
       <Row>
         <Col>
           <Title level={3} className='show-more'>
-            <Link to='/crytocurrencies' className='icon-btn'> Show more click here </Link>
+            <Link to='/crytocurrencies' className='icon-btn'> Show more <ArrowDownOutlined /></Link>
           </Title>
         </Col>
       </Row>
+      </div>
 
       <Row gutter={[32, 32]}>
         <Col sm={24} >
