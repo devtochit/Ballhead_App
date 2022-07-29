@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Menu, Typography, Avatar } from 'antd';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { HomeOutlined, MoneyCollectOutlined, LeftOutlined, BulbOutlined, FundOutlined, MenuOutlined, AudioOutlined, SearchOutlined, WifiOutlined } from '@ant-design/icons';
 
 // import icon from '../images/cryptocurrency.png';
@@ -8,7 +8,8 @@ import { HomeOutlined, MoneyCollectOutlined, LeftOutlined, BulbOutlined, FundOut
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(true);
   const [screenSize, setScreenSize] = useState(undefined);
-  const navigate = useNavigate()
+  const history = useHistory();
+
   const { Text } = Typography
 
   useEffect(() => {
@@ -31,17 +32,17 @@ const Navbar = () => {
 
   return (
     <div className="nav-container">
-      <nav>
-        <ul className='nav-list'>
-          <li>
-            <button onClick={() => navigate(-1)}> <LeftOutlined /></button>
+      <nav nav-navbar>
 
-          </li>
-          <Text level={1}>  cryptolist</Text>
+        <li>
+          <button onClick={history.goBack} className='nav-button'> <LeftOutlined /></button>
+
+        </li>
+        <Text level={1}>  crypto/details</Text>
 
 
 
-          <li><WifiOutlined /></li>
+        <ul className='nav-list2'>
           <li>
             <AudioOutlined />
           </li>

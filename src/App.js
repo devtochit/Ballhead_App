@@ -1,21 +1,33 @@
 import {
-  BrowserRouter as Router, Routes, Route,
+  Switch, Routes, Route,
 } from 'react-router-dom';
 import './App.css';
 import HomePage from './Components/Hompage';
 import CrypoDetails from './Components/crypoDetails';
 import Cryptocurrency from './Components/cryptocurrency';
+import { Layout } from 'antd'
 
 const App = () => (
-  <Router>
+  <Layout>
+    <div className='routes'>
+      <Switch>
+        <Route exact path="/">
+          <HomePage />
+        </Route>
+        <Route exact path="/crytocurrencies">
+          <Cryptocurrency />
+        </Route>
+        <Route exact path="/crypto/:coinId">
+          <CrypoDetails />
+        </Route>
+        <Route>404 Not Found</Route>
+      </Switch>
+    </div>
+  </Layout>
 
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/crytocurrencies" element={<Cryptocurrency />} />
-      <Route path="/crypto/:coinId" element={<CrypoDetails />} />
-      <Route>404 Not Found</Route>
-    </Routes>
-  </Router>
+
+
+
 );
 
 export default App;

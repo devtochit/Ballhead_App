@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import parse from 'html-react-parser';
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useHistory } from 'react-router-dom'
 import millify from 'millify';
 import { Col, Row, Typography, Select } from 'antd'
 import Loader from './Loader'
@@ -14,11 +14,11 @@ const { Options } = Select
 
 function CrypoDetails() {
     const { coinId } = useParams()
-    const navigate = useNavigate();
 
     const [timeperiod, setTimeperiod] = useState('7d')
     const { data, isFetching } = useGetCryptoDetailsQuery(coinId)
     const { data: coinHistory } = useGetCryptoHistoryQuery({ coinId, timeperiod })
+
 
     const cryptoDetails = data?.data?.coin;
 

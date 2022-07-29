@@ -26,27 +26,25 @@ const Navbar = () => {
     } else {
       setActiveMenu(true);
     }
-  }, [screenSize]); 
+  }, [screenSize]);
 
   return (
-    <div className="nav-container">
-      <nav>
-        <ul className='nav-list'>
-          <li>
-            <MenuOutlined />
-          </li>
-          <Text level={1}>  cryptolist</Text>
+    <nav>
+      <ul className='nav-list'>
+        <li>
+          <MenuOutlined />
+        </li>
+        <Text level={1}>  crypto/list</Text>
 
 
 
-          <li><WifiOutlined /></li>
-          <li>
-            <AudioOutlined />
-          </li>
-          <li> <SearchOutlined /></li>
-        </ul>
-      </nav>
-    </div>
+        <li><WifiOutlined /></li>
+        <li>
+          <AudioOutlined />
+        </li>
+        <li> <SearchOutlined /></li>
+      </ul>
+    </nav>
   );
 };
 

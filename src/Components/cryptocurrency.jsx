@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import millify from 'millify';
-// import { Grid } from 'antd-mobile'
-
-import { Card, Row, Col, Input } from 'antd';
+import { Card, Row, Col, Input, Typography, Statistic } from 'antd';
 import { Link } from 'react-router-dom';
 import Loader from './Loader';
 import { useGetCryptosQuery } from '../services/api.service';
+import DetailsNav from './navbar/detailsNav'
 
 
 
 
 
+const { Text } = Typography
 
 
 function Cryptocurrency(simplified) {
-    const count = simplified ? 15 : 100;
+    const count = simplified ? 20 : 100;
     const { data: cryptosList, isFetching } = useGetCryptosQuery(count)
     const [cryptos, setCryptos] = useState()
     const [searchTerm, setSearchTeam] = useState('')
@@ -30,16 +30,16 @@ function Cryptocurrency(simplified) {
 
     if (isFetching) return <Loader />
     const gridStyle = {
-          background: '#1B262C',
+        background: '#1B262C',
         color: ' #fff ',
-        borderRadius: '5px'
+        borderRadius: '5px',
+        marginTop: '10px'
     }
 
     return (
 
         <>
-
-            {!simplified && (
+            {simplified && (
                 <div className='search-crypto'>
                     <Input
                         placeholder='Search Crypto'

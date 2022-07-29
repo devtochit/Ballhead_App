@@ -21,13 +21,14 @@ body{
 a:hover{
     color: var(--pink) !important;
 }
-li p{
+li {
 align-items: center;
+list-style-type:none;
 }
 nav{
     display: flex;
     justify-items: center;
-    background-color: #0071bd;
+    justify-content: space-between;
 }
 
 .app{
@@ -46,7 +47,7 @@ nav{
     
 }
 .routes{
-    padding: 20px;
+    padding: 0px 20px 0px 10px;
 }
 .nav-container{
     /* position: fixed;
@@ -137,10 +138,11 @@ nav{
 
     .nav-container{
         display: block;
-        height: 4vh;
+        height: 5vh;
         position:sticky;
         width: 100%;
         background-color: var(--bgSecondary);
+        margin-top: 10px;
     }
   .nav-list{
     margin-top:15px;
@@ -148,8 +150,12 @@ nav{
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    gap: 70px;
+    gap: 50px;
     list-style-type:none;
+    color: #fff;
+    font: bold;
+    font-weight: 600;
+    font-size: larger;
   }
   
     .menu-control-container{
@@ -309,6 +315,16 @@ nav{
 }
 
 @media screen and (max-width: 500px){
+    .nav-navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav-list2{
+        display:flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: flex-end;
+    }
     .coin-links{
         padding: 0px;
     }
@@ -317,6 +333,47 @@ nav{
     }
 }
 @media screen and (max-width: 500px){
+    .icon-btn{
+        width: 148px;
+        border-radius: 10px;
+        color: #01010c;
+        background: #6765e0;
+        height: 74px;
+        font-weight: 900;
+        box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.25);
+        display: block;
+    }
+    .h2.ant-typography{
+        display: flex;
+    }
+    .h3.ant-typography{
+        display: flex;
+    }
+    .navbar{
+        display: flex;
+    }
+    nav-list2{
+        display: flex;
+    }
+    .nav-button{
+        width: 55px;
+        border-radius: 10px;
+        color: #01010c;
+        background: #6765e0;
+        height: 27px;
+        font-weight: 900;
+        box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.25);
+}
+    }
+    .ant-typography{
+        color: rgb(233, 164, 35) ;
+    }
+    .ant-statistic-content-value{
+        color: wheat;
+    }
+    .ant-typography h2{
+        color: rgb(236, 209, 158);
+    }
     .heading{
         margin-top: 15px;
         background-color: #0071bd;
@@ -332,7 +389,7 @@ nav{
     .blue{
         background-color: #0071bd;
     }
-}
+
 
 .select-news{
     width: 180px;
@@ -391,6 +448,7 @@ width: 70%;
     justify-content: space-between;
     align-items: center;
     margin-top: 40px;
+    gap: 70px;
 }
 .show-more{
     margin-top: 0px !important;
