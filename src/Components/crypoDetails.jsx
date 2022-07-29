@@ -4,7 +4,7 @@ import { useParams, useHistory } from 'react-router-dom'
 import millify from 'millify';
 import { Col, Row, Typography, Select } from 'antd'
 import Loader from './Loader'
-import LineChart from './lineChart'
+// import LineChart from './lineChart'
 import { useGetCryptoDetailsQuery, useGetCryptoHistoryQuery } from '../services/api.service'
 import { MoneyCollectOutlined, DollarCircleOutlined, FundOutlined, ExclamationCircleOutlined, StopOutlined, TrophyOutlined, CheckOutlined, NumberOutlined, ThunderboltOutlined, LeftOutlined } from '@ant-design/icons';
 import DetailsNav from './navbar/detailsNav';
@@ -56,7 +56,7 @@ function CrypoDetails() {
                     {time.map((date) => <Select.Option key={date}> {date}</Select.Option>)}
                 </Select>
 
-                <LineChart coinHistory={coinHistory} currentPrice={millify(cryptoDetails?.price)} coinName={cryptoDetails?.name} />
+                {/* <LineChart coinHistory={coinHistory} currentPrice={millify(cryptoDetails?.price)} coinName={cryptoDetails?.name} /> */}
 
                 <Col className="stats-container">
                     <Col className="coin-value-statistics">
