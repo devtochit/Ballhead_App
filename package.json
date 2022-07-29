@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.6.4",
-    "@netlify/eslint-config-node": "^7.0.0",
     "@reduxjs/toolkit": "^1.8.3",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -32,10 +31,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "config": {
-    "eslint": "--ignore-path .gitignore --cache --format=codeframe --max-warnings=0 \"{src,scripts,tests,.github}/**/*.{cjs,mjs,js,md,html}\" \"*.{cjs,mjs,js,md,html}\" \".*.{cjs,mjs,js,md,html}\"",
-    "prettier": "--ignore-path .gitignore --loglevel=warn \"{src,scripts,tests,.github}/**/*.{cjs,mjs,js,md,yml,json,html}\" \"*.{cjs,mjs,js,yml,json,html}\" \".*.{cjs,mjs,js,yml,json,html}\" \"!package-lock.json\""
-  },
+
   "eslintConfig": {
     "extends": [
       "react-app",
