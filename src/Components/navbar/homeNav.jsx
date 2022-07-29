@@ -3,7 +3,6 @@ import { Button, Menu, Typography, Avatar } from 'antd';
 import { Link } from 'react-router-dom';
 import { HomeOutlined, MoneyCollectOutlined, BulbOutlined, FundOutlined, MenuOutlined, AudioOutlined, SearchOutlined, WifiOutlined } from '@ant-design/icons';
 
-// import icon from '../images/cryptocurrency.png';
 
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(true);
@@ -34,7 +33,7 @@ const Navbar = () => {
         <li>
           <MenuOutlined />
         </li>
-        <Text level={1}>  crypto/List</Text>
+        <Text level={3}>  crypto/List</Text>
 
 
 
