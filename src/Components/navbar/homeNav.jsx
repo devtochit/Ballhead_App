@@ -34,7 +34,7 @@ const Navbar = () => {
         <li>
           <MenuOutlined />
         </li>
-        <Text level={1}>  crypto/list</Text>
+        <Text level={1}>  crypto/List</Text>
 
 
 
