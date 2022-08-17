@@ -1,22 +1,25 @@
-import {
-  BrowserRouter as Router, Routes, Route,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Layout } from 'antd';
+import HomePage from './Components/Hompage';
+import CrypoDetails from './Components/crypoDetails';
+import Cryptocurrency from './Components/cryptocurrency';
 import './App.css';
-import Header from './Components/Header';
-import Profile from './Components/Profile';
-import Rocket from './Components/RocketComponent';
-import Mission from './Components/Mission';
 
 const App = () => (
-  <Router>
-    <Header />
-    <Routes>
-      <Route path="/" element={<Rocket />} />
-      <Route path="/mission:id" element={<Mission />} />
-      <Route path="/profile" element={<Profile />} />
-      <Route>404 Not Found</Route>
-    </Routes>
-  </Router>
+  <Layout>
+    <div className="routes">
+      <Router>
+
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/crypto/:coinId" element={<CrypoDetails />} />
+          <Route path="/crytocurrencies" element={<Cryptocurrency />} />
+          <Route>404 Not Found</Route>
+        </Routes>
+      </Router>
+    </div>
+  </Layout>
+
 );
 
 export default App;

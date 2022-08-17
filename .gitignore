@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 /.pnp
+/.eslintrc.cjs
 .pnp.js
 
 # testing
@@ -30,3 +31,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# Local Netlify folder
+.netlify

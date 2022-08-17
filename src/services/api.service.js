@@ -1,25 +1,39 @@
-const url = 'https://www.cheapshark.com/api/1.0/deals';
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-function restructureData(data) {
-    const arr = [];
+// Note: Change v1 to v2 on rapid api
 
-    data.forEach((data) => {
-        arr.push({
-            id: data.gameID,
-            name: data.title,
-            price: data.normalPrice,
-            images: data.thumb,
-        });
-    });
-    return arr;
-}
-export const getGameData = async (job, thunkAPI) => {
-    try {
-        const response = await fetch(url, job);
-        const data = await response.json();
-        const data2 = restructureData(data.slice(12, 25));
-        return data2;
-    } catch {
-        return thunkAPI.rejectWithValue('something went wrong');
-    }
+const cryptoApiHeaders = {
+  'x-rapidapi-host': process.env.REACT_APP_CRYPTO_RAPIDAPI_HOST,
+  'x-rapidapi-key': process.env.REACT_APP_RAPIDAPI_KEY,
 };
+const createRequest = (url) => ({ url, headers: cryptoApiHeaders });
+
+export const cryptoApi = createApi({
+  reducerPath: 'cryptoApi',
+  baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_CRYPTO_API_URL }),
+  endpoints: (builder) => ({
+    getCryptos: builder.query({
+      query: (count) => createRequest(`/coins?limit=${count}`),
+    }),
+
+    getCryptoDetails: builder.query({
+      query: (coinId) => createRequest(`/coin/${coinId}`),
+    }),
+
+    getCryptoHistory: builder.query({
+      query: ({ coinId, timeperiod }) => createRequest(`coin/${coinId}/history?timeperiod=${timeperiod}`),
+    }),
+
+    // Note: To access this endpoint you need premium plan
+    getExchanges: builder.query({
+      query: () => createRequest('/exchanges'),
+    }),
+  }),
+});
+
+export const {
+  useGetCryptosQuery,
+  useGetCryptoDetailsQuery,
+  useGetExchangesQuery,
+  useGetCryptoHistoryQuery,
+} = cryptoApi;

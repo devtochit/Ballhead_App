@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
-import gameReducer from './game/game';
+import { cryptoApi } from '../services/api.service';
 
 export default configureStore({
   reducer: {
-    game: gameReducer,
+    [cryptoApi.reducerPath]: cryptoApi.reducer,
   },
 });
